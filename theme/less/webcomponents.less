@@ -1,0 +1,81 @@
+/**
+ * Presentation Styles
+ */
+body{
+  //background: #3a99d7;
+}
+
+@import "orbitLogo";
+
+slides > slide {
+  &:not(.nobackground) {
+    &:before {
+     display: none;
+    }
+  }
+  &.title-slide {
+    > .logos {
+      padding-left: 115px;
+      margin-bottom: 30px;
+      > .separator {
+        font-size: 150px;
+      }
+      > .polymer {
+        position: relative;
+        bottom: -20px;
+        height: 175px;
+      }
+    }
+    > hgroup {
+      position: relative;
+      bottom: auto;
+      > h1 {
+        font-size: 58px;
+      }
+    }
+  }
+  &.big-task {
+    h2 {
+      font-size: 35px;
+    }
+  }
+  &.twitter-page {
+    .holder {
+      display: flex;
+      > .screenshot {
+        flex: 1.5;
+      }
+      > .components-list {
+        flex: 1;
+        padding-left: 30px;
+      }
+    }
+  }
+  &.libraries {
+    ul {
+      margin-left: 0;
+      > li {
+        &:before {
+          display: none;
+        }
+        > a {
+          display: flex;
+          border-bottom: none;
+          color: #AC0303;
+          font-weight: bold;
+          > img {
+            flex-basis: 80px;
+            height: 80px;
+            margin-right: 20px;
+          }
+          > p {
+            height: 80px;
+            line-height: 80px;
+            flex: 1 1 auto;
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}

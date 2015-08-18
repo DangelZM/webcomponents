@@ -1,0 +1,28 @@
+{
+  "name":"Ivan",
+  "lastname":"Zmerzlyi",
+  "fullName": "Ivan Zmerzlyi",
+  "img": "http://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAM4AAAAJGZhYTIxMjVkLTYwMDEtNDM2Ny04ZmMxLTIzYjIzY2IyYWViYg.jpg",
+  "work": "Full stack web developer",
+  "company": {
+    "title": "Trinity Systems",
+    "logo": "http://trinity.ck.ua/wp-content/themes/trinity/img/trinity-logo.png"
+  },
+  "contacts": [
+    {
+      "type": "google-plus",
+      "text": "google.com/+IvanZmerzlyi",
+      "link": "https://google.com/+IvanZmerzlyi"
+    },
+    {
+      "type": "twitter",
+      "text": "@IvanZmerzlyi",
+      "link": "https://twitter.com/@IvanZmerzlyi"
+    },
+    {
+      "type": "at",
+      "text": "ivan.zmerzlyi@gmail.com",
+      "link": "mailto:ivan.zmerzlyi@gmail.com"
+    }
+  ]
+}

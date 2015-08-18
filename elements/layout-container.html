@@ -1,0 +1,50 @@
+<link rel="import" href="../bower_components/polymer/polymer.html"/>
+
+<dom-module id="layout-container">
+    <style>
+        :host {
+            display: flex;
+        }
+        :host(.column){
+            flex-direction: column;
+        }
+        :host(.row){
+            flex-direction: row;
+        }
+
+        ::content .box {
+            margin-bottom: 15px;
+        }
+
+        ::content .box + .box {
+            margin-left: 15px;
+        }
+        ::content .b1 {
+            flex: 1;
+        }
+        ::content .b2 {
+            flex: 2;
+        }
+        ::content .b3 {
+            flex: 3;
+        }
+        ::content .b4 {
+            flex: 4;
+        }
+        ::content .b5 {
+            flex: 5;
+        }
+        ::content .b6 {
+            flex: 6;
+        }
+    </style>
+    <template>
+        <content></content>
+    </template>
+</dom-module>
+
+<script>
+    Polymer({
+        is: "layout-container",
+    })
+</script>

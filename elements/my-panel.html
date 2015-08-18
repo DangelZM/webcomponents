@@ -1,0 +1,75 @@
+<link rel="import" href="../bower_components/polymer/polymer.html"/>
+
+<dom-module id="my-panel">
+    <style>
+        :host {
+            display: block;
+            width: 600px;
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+            0 1px 5px 0 rgba(0, 0, 0, 0.12),
+            0 3px 1px -2px rgba(0, 0, 0, 0.2);
+        }
+
+        .header {
+            height: 40px;
+            line-height: 40px;
+            border-radius: 6px 6px 0 0;
+            background: #369;
+            color: #ffffff;
+            font-size: 18px;
+            padding: 0 10px;
+            margin: 0 -1px 0;
+        }
+
+        :host(.box){
+            width: auto;
+        }
+
+        :host(.primary) .header{
+            background: #337ab7;
+        }
+
+        :host(.success) .header{
+            background: #5cb85c;
+            color: #333;
+        }
+        
+        :host(.info) .header{
+            background: #5bc0de;
+            color: #333;
+        }
+
+        :host(.warning) .header {
+            background: #f0ad4e;
+            color: #333;
+        }
+
+        :host(.danger) .header {
+            background: #d9534f;
+        }
+
+        .content {
+            background: #fff;
+            padding: 10px 10px 15px;
+            font-size: 14px;
+            color: #000;
+        }
+    </style>
+    <template>
+        <div class="header">{{header}}</div>
+        <div class="content">
+            <content></content>
+        </div>
+    </template>
+</dom-module>
+
+<script>
+    Polymer({
+        is: "my-panel",
+        properties: {
+            header: {
+                type: String
+            }
+        }
+    })
+</script>

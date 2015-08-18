@@ -1,0 +1,95 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/iron-ajax/iron-ajax.html">
+
+<dom-module id="about-me">
+    <style>
+        :host {
+            display: block;
+            width: 100%;
+            color: #555;
+        }
+        .holder {
+            display: flex;
+        }
+        .photo {
+            flex: 1;
+            margin-right: 20px;
+        }
+        .photo > img {
+            border-radius: 10px;
+            max-width: 100%;
+        }
+        .info {
+            flex: 2;
+        }
+        .info .company-logo {
+            width: 35px;
+        }
+        .info .contacts {
+            margin-top: 90px;
+        }
+        .info .contacts > div {
+            margin-bottom: 25px;
+        }
+        .info .contacts i {
+            position: relative;
+            top: 6px;
+            margin-right: 8px;
+        }
+        .info .contacts a {
+            text-decoration: none;
+            border-bottom: none;
+        }
+        :host(.white) .info .contacts a {
+            color: #fff;
+        }
+
+    </style>
+    <template>
+        <iron-ajax auto
+                   url="{{getUrl(username)}}"
+                   handle-as="json"
+                   last-response="{{ajaxResponse}}"></iron-ajax>
+        <div class="holder">
+            <div class="info">
+                <template is="dom-if" if="{{info}}">
+                    <span>[[ajaxResponse.fullName]]</span><br>
+                    <span>[[ajaxResponse.work]]</span>,
+                    <span>[[ajaxResponse.company.title]]</span>
+                    <img class="company-logo" src="[[ajaxResponse.company.logo]]" />
+                </template>
+                <template is="dom-if" if="{{contacts}}">
+                    <div class="contacts">
+                        <template is="dom-repeat" items="[[ajaxResponse.contacts]]">
+                            <div><i class$="{{getIconType(item.type)}}"></i><a href="[[item.link]]">{{item.text}}</a></div>
+                        </template>
+                    </div>
+                </template>
+            </div>
+            <template is="dom-if" if="{{photo}}">
+                <div class="photo">
+                    <img src="[[ajaxResponse.img]]" alt="[[ajaxResponse.fullName]]" title="[[ajaxResponse.fullName]]" />
+                </div>
+            </template>
+        </div>
+    </template>
+
+    <script>
+        Polymer({
+            is: "about-me",
+            properties: {
+                username: String,
+                contacts: Boolean,
+                info: Boolean,
+                photo: Boolean
+            },
+            getUrl: function (username) {
+                return "./users/" + username + ".json"
+            },
+            getIconType: function (type) {
+                return "fa fa-" + type;
+            }
+        });
+    </script>
+
+</dom-module>

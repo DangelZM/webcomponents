@@ -1,0 +1,215 @@
+slides {
+  > slide {
+    &.logoslide {
+      background: #3a99d7;
+      position: relative;
+      img {
+        width: auto;
+        height: auto;
+        &.webcomponents {
+          position: absolute;
+          width: 300px;
+          height: 300px;
+          top: 50%;
+          left: 50%;
+          margin-left: -150px;
+          margin-top: -150px;
+        }
+        &.wc-parts {
+          position: absolute;
+          width: 100px;
+          height: 100px;
+          top: 50%;
+          left: 50%;
+          margin-left: -50px;
+          margin-top: -50px;
+        }
+        &.customelements {
+          -webkit-animation: customelementsOrbit 8s linear infinite; /* Chrome, Safari 5 */
+          -moz-animation: customelementsOrbit 8s linear infinite; /* Firefox 5-15 */
+          -o-animation: customelementsOrbit 8s linear infinite; /* Opera 12+ */
+          animation: customelementsOrbit 8s linear infinite; /* Chrome, Firefox 16+, IE 10+, Safari 5 */
+        }
+        &.htmlimports {
+          -webkit-animation: htmlimportsOrbit 8s linear infinite; /* Chrome, Safari 5 */
+          -moz-animation: htmlimportsOrbit 8s linear infinite; /* Firefox 5-15 */
+          -o-animation: htmlimportsOrbit 8s linear infinite; /* Opera 12+ */
+          animation: htmlimportsOrbit 8s linear infinite; /* Chrome, Firefox 16+, IE 10+, Safari 5 */
+        }
+        &.templates {
+          -webkit-animation: templatesOrbit 8s linear infinite; /* Chrome, Safari 5 */
+          -moz-animation: templatesOrbit 8s linear infinite; /* Firefox 5-15 */
+          -o-animation: templatesOrbit 8s linear infinite; /* Opera 12+ */
+          animation: templatesOrbit 8s linear infinite; /* Chrome, Firefox 16+, IE 10+, Safari 5 */
+        }
+        &.shadowdom {
+          -webkit-animation: shadowdomOrbit 8s linear infinite; /* Chrome, Safari 5 */
+          -moz-animation: shadowdomOrbit 8s linear infinite; /* Firefox 5-15 */
+          -o-animation: shadowdomOrbit 8s linear infinite; /* Opera 12+ */
+          animation: shadowdomOrbit 8s linear infinite; /* Chrome, Firefox 16+, IE 10+, Safari 5 */
+        }
+      }
+    }
+    &.webcomponents-list{
+      .web-animation {
+        position: absolute;
+        height: 50%;
+        width: 50%;
+        top: 25%;
+        right: 10%;
+        img {
+          width: auto;
+          height: auto;
+          &.webcomponents {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            top: 50%;
+            left: 50%;
+            margin-left: -150px;
+            margin-top: -150px;
+            -webkit-animation: webcomponentsRotate 16s linear infinite; /* Chrome, Safari 5 */
+            -moz-animation: webcomponentsRotate 16s linear infinite; /* Firefox 5-15 */
+            -o-animation: webcomponentsRotate 16s linear infinite; /* Opera 12+ */
+            animation: webcomponentsRotate 16s linear infinite; /* Chrome, Firefox 16+, IE 10+, Safari 5 */
+          }
+          &.wc-parts {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            top: 50%;
+            left: 50%;
+            margin-left: -50px;
+            margin-top: -50px;
+          }
+          &.customelements {
+            -webkit-animation: customelementsOrbit 8s linear infinite; /* Chrome, Safari 5 */
+            -moz-animation: customelementsOrbit 8s linear infinite; /* Firefox 5-15 */
+            -o-animation: customelementsOrbit 8s linear infinite; /* Opera 12+ */
+            animation: customelementsOrbit 8s linear infinite; /* Chrome, Firefox 16+, IE 10+, Safari 5 */
+          }
+          &.htmlimports {
+            -webkit-animation: htmlimportsOrbit 8s linear infinite; /* Chrome, Safari 5 */
+            -moz-animation: htmlimportsOrbit 8s linear infinite; /* Firefox 5-15 */
+            -o-animation: htmlimportsOrbit 8s linear infinite; /* Opera 12+ */
+            animation: htmlimportsOrbit 8s linear infinite; /* Chrome, Firefox 16+, IE 10+, Safari 5 */
+          }
+          &.templates {
+            -webkit-animation: templatesOrbit 8s linear infinite; /* Chrome, Safari 5 */
+            -moz-animation: templatesOrbit 8s linear infinite; /* Firefox 5-15 */
+            -o-animation: templatesOrbit 8s linear infinite; /* Opera 12+ */
+            animation: templatesOrbit 8s linear infinite; /* Chrome, Firefox 16+, IE 10+, Safari 5 */
+          }
+          &.shadowdom {
+            -webkit-animation: shadowdomOrbit 8s linear infinite; /* Chrome, Safari 5 */
+            -moz-animation: shadowdomOrbit 8s linear infinite; /* Firefox 5-15 */
+            -o-animation: shadowdomOrbit 8s linear infinite; /* Opera 12+ */
+            animation: shadowdomOrbit 8s linear infinite; /* Chrome, Firefox 16+, IE 10+, Safari 5 */
+          }
+        }
+      }
+    }
+  }
+
+}
+
+@-webkit-keyframes webcomponentsRotate {
+  from { -webkit-transform: rotate(0deg); }
+  to   { -webkit-transform: rotate(360deg); }
+}
+
+@-moz-keyframes webcomponentsRotate {
+  from { -moz-transform: rotate(0deg); }
+  to   { -moz-transform: rotate(360deg); }
+}
+
+@-o-keyframes webcomponentsRotate {
+  from { -o-transform: rotate(0deg); }
+  to   { -o-transform: rotate(360deg); }
+}
+
+@keyframes webcomponentsRotate {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@-webkit-keyframes customelementsOrbit {
+  from { -webkit-transform: rotate(0deg) translateX(200px) rotate(0deg); }
+  to   { -webkit-transform: rotate(360deg) translateX(200px) rotate(-360deg); }
+}
+
+@-moz-keyframes customelementsOrbit {
+  from { -moz-transform: rotate(0deg) translateX(200px) rotate(0deg); }
+  to   { -moz-transform: rotate(360deg) translateX(200px) rotate(-360deg); }
+}
+
+@-o-keyframes customelementsOrbit {
+  from { -o-transform: rotate(0deg) translateX(200px) rotate(0deg); }
+  to   { -o-transform: rotate(360deg) translateX(200px) rotate(-360deg); }
+}
+
+@keyframes customelementsOrbit {
+  from { transform: rotate(0deg) translateX(200px) rotate(0deg); }
+  to   { transform: rotate(360deg) translateX(200px) rotate(-360deg); }
+}
+
+@-webkit-keyframes htmlimportsOrbit {
+  from { -webkit-transform: rotate(0deg) translateY(200px) rotate(0deg); }
+  to   { -webkit-transform: rotate(360deg) translateY(200px) rotate(-360deg); }
+}
+
+@-moz-keyframes htmlimportsOrbit {
+  from { -moz-transform: rotate(0deg) translateY(200px) rotate(0deg); }
+  to   { -moz-transform: rotate(360deg) translateY(200px) rotate(-360deg); }
+}
+
+@-o-keyframes htmlimportsOrbit {
+  from { -o-transform: rotate(0deg) translateY(200px) rotate(0deg); }
+  to   { -o-transform: rotate(360deg) translateY(200px) rotate(-360deg); }
+}
+
+@keyframes htmlimportsOrbit {
+  from { transform: rotate(0deg) translateY(200px) rotate(0deg); }
+  to   { transform: rotate(360deg) translateY(200px) rotate(-360deg); }
+}
+
+@-webkit-keyframes templatesOrbit {
+  from { -webkit-transform: rotate(0deg) translateX(200px) rotate(0deg); }
+  to   { -webkit-transform: rotate(360deg) translateX(200px) rotate(-360deg); }
+}
+
+@-moz-keyframes templatesOrbit {
+  from { -moz-transform: rotate(0deg) translateX(200px) rotate(0deg); }
+  to   { -moz-transform: rotate(360deg) translateX(200px) rotate(-360deg); }
+}
+
+@-o-keyframes templatesOrbit {
+  from { -o-transform: rotate(0deg) translateX(-200px) rotate(0deg); }
+  to   { -o-transform: rotate(360deg) translateX(-200px) rotate(-360deg); }
+}
+
+@keyframes templatesOrbit {
+  from { transform: rotate(0deg) translateX(-200px) rotate(0deg); }
+  to   { transform: rotate(360deg) translateX(-200px) rotate(-360deg); }
+}
+
+@-webkit-keyframes shadowdomOrbit {
+  from { -webkit-transform: rotate(0deg) translateY(-200px) rotate(0deg); }
+  to   { -webkit-transform: rotate(360deg) translateY(-200px) rotate(-360deg); }
+}
+
+@-moz-keyframes shadowdomOrbit {
+  from { -moz-transform: rotate(0deg) translateY(-200px) rotate(0deg); }
+  to   { -moz-transform: rotate(360deg) translateY(-200px) rotate(-360deg); }
+}
+
+@-o-keyframes shadowdomOrbit {
+  from { -o-transform: rotate(0deg) translateY(-200px) rotate(0deg); }
+  to   { -o-transform: rotate(360deg) translateY(-200px) rotate(-360deg); }
+}
+
+@keyframes shadowdomOrbit {
+  from { transform: rotate(0deg) translateY(-200px) rotate(0deg); }
+  to   { transform: rotate(360deg) translateY(-200px) rotate(-360deg); }
+}
+

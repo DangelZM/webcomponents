@@ -1,0 +1,540 @@
+<!--
+Google IO 2012/2013 HTML5 Slide Template
+
+Authors: Eric Bidelman <ebidel@gmail.com>
+         Luke Mahé <lukem@google.com>
+
+URL: https://code.google.com/p/io-2012-slides
+-->
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">-->
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+  <!--This one seems to work all the time, but really small on ipad-->
+  <!--<meta name="viewport" content="initial-scale=0.4">-->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="stylesheet" media="all" href="theme/css/default.css">
+  <link rel="stylesheet" media="all" href="theme/css/webcomponents.css">
+  <link rel="stylesheet" media="all" href="bower_components/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="theme/css/phone.css">
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->
+  <script data-main="js/slides" src="js/require-1.0.8.min.js"></script>
+  <script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
+  <link rel="import" href="elements/about-me.html">
+  <link rel="import" href="elements/layout-container.html">
+  <link rel="import" href="elements/my-panel.html">
+</head>
+<body style="opacity: 0">
+
+<slides class="layout-widescreen">
+
+  <slide class="logoslide nobackground">
+    <article class="flexbox vcenter">
+      <img class="webcomponents" src="images/geekTalks/logo.svg" />
+      <img class="wc-parts customelements" src="images/geekTalks/icon-customelements.png" />
+      <img class="wc-parts htmlimports" src="images/geekTalks/icon-htmlimports.png" />
+      <img class="wc-parts templates" src="images/geekTalks/icon-templates.png" />
+      <img class="wc-parts shadowdom" src="images/geekTalks/icon-shadowdom.png" />
+    </article>
+  </slide>
+
+  <slide class="about-slide">
+    <hgroup>
+      <h2>&lt;about-me&gt;</h2>
+    </hgroup>
+    <article>
+      <about-me username="IvanZmerzlyi" contacts photo info></about-me>
+    </article>
+  </slide>
+
+  <slide class="title-slide segue nobackground">
+    <div class="logos auto-fadein">
+      <img class="webcomponents" src="images/geekTalks/logo.svg" />
+      <span class="separator"> / </span>
+      <img class="polymer" src="images/geekTalks/polymer-m-logo.jpg" />
+    </div>
+    <hgroup class="auto-fadein">
+      <h1 data-config-title><!-- populated from slide_config.json --></h1>
+      <h2 data-config-subtitle><!-- populated from slide_config.json --></h2>
+    </hgroup>
+    <aside class="note">
+      <section>
+        <p>
+          От валидации форм до переноса бизнес логики на клиент.
+          Мы уже разрабатываем не сайты а веб приложения.
+          Которые изо дня в день, становяться все сложнее.
+        </p>
+      </section>
+    </aside>
+  </slide>
+
+  <slide class="big-task">
+    <hgroup class="centered">
+      <h2>Ключевое правило при разработке сложных вещей?</h2>
+    </hgroup>
+    <article class="flexbox vcenter">
+      <img src="images/geekTalks/mks.jpg" alt="Сложная вещь" title="Сложная вещь">
+    </article>
+    <aside class="note">
+      <section>
+        <p>
+          Вопрос для аудитории
+        </p>
+      </section>
+    </aside>
+  </slide>
+
+  <slide class="big-task-answer">
+    <hgroup class="centered">
+      <h2>!!! Никогда не делайте сложных вещей !!!</h2>
+    </hgroup>
+    <article class="flexbox vcenter">
+      <img src="images/geekTalks/satellite-expanded.jpg" alt="Сложная вещь состоит из более простых" title="Сложная вещь состоит из более простых">
+    </article>
+    <aside class="note">
+      <section>
+        <p>
+          Часто сложное состоит из более простого.
+          И можно собрать сложный проект из простых компонентов.
+          Расмотрим пример сайта.
+        </p>
+      </section>
+    </aside>
+  </slide>
+
+  <slide class="twitter-screenshot">
+    <article class="flexbox vcenter">
+      <img style="max-width: 100%" src="images/geekTalks/twitter-page.jpg" alt=""/>
+    </article>
+    <footer class="source"><a href="https://twitter.com/addyosmani">https://twitter.com/addyosmani</a></footer>
+    <aside class="note">
+      <section>
+        <p>
+          Мы можем выделить четкие компоненты из которых может состоять веб приложение.
+        </p>
+      </section>
+    </aside>
+  </slide>
+
+  <slide class="twitter-page">
+    <div class="holder">
+      <div class="screenshot">
+        <img style="max-width: 100%" src="images/geekTalks/twitter-page.jpg" />
+      </div>
+      <div class="components-list">
+        <h3 style="margin-bottom: 10px;">Компоненты страницы</h3>
+        <ul class="build">
+          <li>Главное меню</li>
+          <li>Профиль автора</li>
+          <li>Tab панель</li>
+          <li>Список твитов</li>
+          <li>Близкие по духу</li>
+          <li>Актуальные темы</li>
+          <li>...</li>
+        </ul>
+      </div>
+    </div>
+    <div class="holder">
+      <ul class="build" style="list-style: none">
+        <li>
+          <div>Главное меню</div>
+          <ul class="build">
+            <li>Блок ссылок</li>
+            <li>Блок логотипа</li>
+            <li>Блок поиска</li>
+            <li>Кнопка профиля</li>
+            <li>Кнопка Твитнуть</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </slide>
+
+  <slide class="page-code">
+    <hgroup>
+      <h2>Как можно представить код страницы</h2>
+    </hgroup>
+    <article>
+      <pre class="prettyprint" data-lang="html">
+        &lt;header&gt;<br>
+        <b>&nbsp;&nbsp;&lt;top-menu&gt;&lt;/top-menu&gt;</b><br>
+        &lt;/header&gt;<br>
+        &lt;aside&gt;<br>
+        <b>&nbsp;&nbsp;&lt;profile-card&gt;&lt;/profile-card&gt;</b><br>
+        &lt;/aside&gt;<br>
+        &lt;main&gt;<br>
+        <b>&nbsp;&nbsp;&lt;tab-panel&gt;&lt;/tab-panel&gt;</b><br>
+        <b>&nbsp;&nbsp;&lt;tweets-container&gt;&lt;/tweets-container&gt;</b><br>
+        &lt;/main&gt;<br>
+        &lt;aside&gt;<br>
+        <b>&nbsp;&nbsp;&lt;whotofollow-block&gt;&lt;/whotofollow-block&gt;</b><br>
+        <b>&nbsp;&nbsp;&lt;trends-block&gt;&lt;/trends-block&gt;</b><br>
+        &lt;/aside&gt;
+      </pre>
+      <div class="build">
+        <h2>Веб-компоненты — это возможность добавлять свои элементы в браузер</h2>
+      </div>
+    </article>
+  </slide>
+
+  <slide class="webcomponents-list">
+    <hgroup>
+      <h2>Веб-компоненты</h2>
+      <h3>набор стандартов</h3>
+    </hgroup>
+    <article>
+      <ul>
+        <li>Custom Elements</li>
+        <li>Shadow DOM</li>
+        <li>HTML Templates</li>
+        <li>HTML Imports</li>
+      </ul>
+    </article>
+    <aside class="web-animation flexbox vcenter build">
+      <div>
+        <img class="webcomponents" src="images/geekTalks/logo.svg" />
+        <img class="wc-parts customelements" src="images/geekTalks/icon-customelements.png" />
+        <img class="wc-parts htmlimports" src="images/geekTalks/icon-htmlimports.png" />
+        <img class="wc-parts templates" src="images/geekTalks/icon-templates.png" />
+        <img class="wc-parts shadowdom" src="images/geekTalks/icon-shadowdom.png" />
+      </div>
+    </aside>
+  </slide>
+
+  <slide class="customelementsSpec">
+    <hgroup>
+      <h2>Custom Elements</h2>
+    </hgroup>
+    <article>
+      Позволяет описывать для новых элементов свои свойства, методы, объявлять свой DOM, подобие конструктора и многое другое.
+      <br/>
+      <br/>
+      Открывают такие нужные для веб компонентов возможности:
+      <br/>
+      <br/>
+      <ul>
+        <li>Определить новые HTML/DOM элементы</li>
+        <li>Создания элементов, которые расширяються от других элементов</li>
+        <li>Логично связать вместе пользовательские функции в одном теге</li>
+        <li>Расширить API существующих элементов DOM</li>
+      </ul>
+    </article>
+    <aside class="note">
+      <section>
+        <p>
+          Самая важная по моему мнению часть веб компонентов.
+        </p>
+      </section>
+    </aside>
+  </slide>
+
+  <slide class="customelementsSpecExample">
+    <hgroup>
+      <h2>Создание собственых элементов</h2>
+    </hgroup>
+    <article>
+      <div>
+        <pre class="prettyprint" data-lang="js">
+          var MyCustomProto = Object.create(HTMLElement.prototype);<br/>
+          MyCustomProto.createdCallback = function() {<br/>
+          &nbsp;&nbsp;this.innerHTML = "My Custom Element";<br/>
+          &nbsp;&nbsp;this.addEventListener('click', function(e) {<br/>
+          &nbsp;&nbsp;&nbsp;&nbsp;alert('MyCustomElement click callback!');<br/>
+          &nbsp;&nbsp;});<br/>
+          };<br/>
+          document.registerElement("my-custom", {<br/>
+          &nbsp;&nbsp;prototype: MyCustomProto<br/>
+          });<br/>
+        </pre>
+        <pre class="prettyprint" data-lang="html">
+          &lt;my-custom&gt;&lt;/my-custom&gt;
+        </pre>
+        <a href="http://jsfiddle.net/DangelZM/k3dr03rf/">Example</a>
+      </div>
+    </article>
+  </slide>
+
+  <slide class="customelementsSpecExample2">
+    <hgroup>
+      <h2>Расширение встроенных элементов</h2>
+    </hgroup>
+    <article>
+      <div>
+        <pre class="prettyprint" data-lang="js">
+          var MyButtonProto = Object.create(HTMLButtonElement.prototype);<br/>
+          MyButtonProto.createdCallback = function() {<br/>
+          &nbsp;&nbsp;this.innerHTML = "My Button Element";<br/>
+          &nbsp;&nbsp;this.addEventListener('click', function(e) {<br/>
+          &nbsp;&nbsp;&nbsp;&nbsp;alert('MyButtonElement click callback!');<br/>
+          &nbsp;&nbsp;});<br/>
+          };<br/>
+          document.registerElement("my-button", {<br/>
+          &nbsp;&nbsp;prototype: MyButtonProto,<br/>
+          &nbsp;&nbsp;extends: 'button'<br/>
+          });<br/>
+        </pre>
+        <pre class="prettyprint" data-lang="html">
+          &lt;button is="my-button"&gt;&lt;/button&gt; // !!!
+        </pre>
+        <a href="http://jsfiddle.net/DangelZM/etoyw2qx/">Example</a>
+      </div>
+    </article>
+  </slide>
+
+  <slide class="life-cycle">
+    <hgroup>
+      <h2>Жизненный цикл</h2>
+    </hgroup>
+    <article>
+      <div style="line-height: 40px;">
+        В прототипе своего элемента мы можем задать специальные методы,
+        которые будут вызываться при создании, добавлении и удалении элемента из DOM:
+      </div>
+      <br/>
+      <table>
+        <tr>
+          <td>createdCallback</td><td>Элемент создан</td>
+        </tr>
+        <tr>
+          <td>attachedCallback</td><td>Элемент добавлен в документ</td>
+        </tr>
+        <tr>
+          <td>detachedCallback</td><td>Элемент удалён из документа</td>
+        </tr>
+        <tr>
+          <td>attributeChangedCallback(name, prevValue, newValue)</td><td>Атрибут добавлен, изменён или удалён</td>
+        </tr>
+      </table>
+    </article>
+  </slide>
+
+  <slide class="shadowDom">
+    <hgroup>
+      <h2>Shadow DOM</h2>
+    </hgroup>
+    <article>
+      Инструмент инкапсуляции HTML/CSS.
+      <br/><br/>
+      <div style="line-height: 30px;">
+        Это внутренний DOM элемента, который существует отдельно от внешнего документа.
+        В нём могут быть свои ID, свои стили и так далее. Причём снаружи его, без применения специальных техник,
+        не видно, поэтому не возникает конфликтов. <br/><br/>
+        Отличный пример — элементы <b>&lt;audio&gt;</b> и <b>&lt;video&gt;</b>. В коде мы размещаем один тег, а браузер отображает
+        несколько элементов (слайдеры, кнопки, окно проигрывателя). В Chrome эти и некоторые другие элементы используют
+        Shadow DOM.
+      </div>
+      <br/><br/>
+      <div>
+        <audio controls="controls"></audio><br/><br/>
+        <input type="range" min="1" max="100"/><br/><br/>
+        <input type="date"/>
+      </div>
+    </article>
+  </slide>
+
+  <slide class="templatesSpec">
+    <hgroup>
+      <h2>HTML Templates</h2>
+    </hgroup>
+    <article>
+      Фрагменты HTML, которые программист собирается использовать в будущем.
+      <br/><br/>
+      <div style="line-height: 30px;">
+        В web components шаблоны — это фрагменты DOM.
+        Браузер парсит их содержимое, но не выполняет до тех пор, пока мы не вставим его в документ.
+        То есть браузер не будет загружать картинки, аудио и видео, не будет выполнять скрипты.<br/><br/>
+
+        Тег <b>&lt;template&gt;</b> не призван заменить системы шаблонизации.
+        В нём нет хитрых операторов итерации, привязок к данным.<br/><br/>
+
+        Его основная особенность — это возможность вставки «живого» содержимого, вместе со скриптами.
+      </div>
+    </article>
+  </slide>
+
+  <slide class="importsSpec">
+    <hgroup>
+      <h2>HTML Imports</h2>
+    </hgroup>
+    <article>
+      Импорт задуман как часть платформы Web Components и дает возможность
+      вставить один документ в другой при помощи <br/>HTML-тега <b>&lt;link rel="import"&gt;</b>
+      <br/><br/>
+      <div style="line-height: 30px;">
+        Предполагается, что главный документ может импортировать файлы-определения,
+        в которых будут все необходимые HTML, JS и CSS для элементов, а затем использовать их.
+      </div>
+    </article>
+  </slide>
+
+  <slide class="vendors">
+    <hgroup class="centered">
+      <h2>Ситуация с подержкой</h2>
+    </hgroup>
+    <article class="flexbox vcenter">
+      <img style="max-width: 100%;" src="images/geekTalks/support.jpg">
+      <footer class="source"><a href="http://jonrimmer.github.io/are-we-componentized-yet/">http://jonrimmer.github.io/are-we-componentized-yet/</a></footer>
+    </article>
+  </slide>
+
+  <slide class="libraries">
+    <hgroup>
+      <h2>Libraries</h2>
+    </hgroup>
+    <article>
+      <ul>
+        <li>
+          <a href="http://www.polymer-project.org/">
+            <img src="images/geekTalks/icon-polymer.png" />
+            <p>Polymer by Google</p>
+          </a>
+        </li>
+        <li>
+          <a href="http://x-tags.org/">
+            <img src="images/geekTalks/icon-xtags.png" />
+            <p>X-Tags by Mozilla</p>
+          </a>
+        </li>
+        <li>
+          <a href="http://bosonic.github.io/">
+            <img src="images/geekTalks/icon-bosonic.png" />
+            <p>Bosonic</p>
+          </a>
+        </li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide class="polymer-title nobackground">
+    <article class="flexbox vcenter">
+      <div style="position: relative; padding-left: 120px; height: 120px;">
+        <img style="position: absolute; top: 0;left: 0;" class="polymer-logo" src="images/geekTalks/polymer-m-logo.jpg" />
+        <span style="font-size: 80px; line-height: 120px; padding-left: 30px;">Polymer</span>
+      </div>
+    </article>
+  </slide>
+
+  <slide class="about-polymer">
+    <hgroup>
+      <h2>Что такое Polymer?</h2>
+    </hgroup>
+    <article>
+      <div style="font-size: 30px;line-height: 45px; color: 333;">
+        <b>Polymer</b> это библиотека (сами разработчики называют это, набором полифилов и синтаксического сахара)
+        для создания и использования веб-компонент.
+      </div>
+    </article>
+  </slide>
+
+  <slide class="polymer-catalog">
+    <hgroup class="centered">
+      <h2>Polymer Catalog</h2>
+    </hgroup>
+    <article class="flexbox vcenter">
+      <img style="max-width: 100%" src="images/geekTalks/polymer-catalog.jpg">
+      <footer class="source">
+        <a href="https://elements.polymer-project.org/">
+          https://elements.polymer-project.org/
+        </a>
+      </footer>
+    </article>
+  </slide>
+
+  <slide class="links">
+    <hgroup class="centered">
+      <h2>Полезные ссылки</h2>
+    </hgroup>
+    <article class="flexbox vcenter">
+      <ul>
+        <li><a href="http://webcomponents.org/">Сайт Webcomponents.org</a></li>
+        <li><a href="https://www.polymer-project.org/1.0/">Сайт библиотеки Polymer</a></li>
+        <li><a href="https://elements.polymer-project.org/">Каталог Polymer елементов</a></li>
+        <li><a href="http://cds-polymer.appspot.com/">Пример приложения "Контакты"</a></li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide class="polymer-example">
+    <hgroup class="centered">
+      <h2>Example</h2>
+    </hgroup>
+    <article class="flexbox vcenter">
+      <layout-container class="row">
+        <my-panel class="box b2 primary" header="My custom panel">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Vestibulum vestibulum gravida lectus vel tincidunt.
+          Etiam consequat bibendum enim quis venenatis. In hac habitasse platea dictumst.
+          Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+          Sed convallis rutrum neque vitae dapibus. Etiam blandit orci ut lacus egestas eleifend.
+          Sed accumsan bibendum lectus, eget tincidunt ex volutpat ac.
+        </my-panel>
+        <my-panel class="box b2 success" header="Success panel">
+          Phasellus eu nulla id ex posuere cursus. Nam eleifend venenatis tempus.
+          Praesent ullamcorper tellus et nisl pellentesque, sit amet fermentum sapien lobortis.
+          Suspendisse tristique magna non purus fringilla dictum sit amet nec erat.
+          Aenean pharetra nec lacus vulputate convallis. Phasellus suscipit elit dolor,
+          vitae ultricies sem finibus tincidunt. Praesent nec lorem vel ante porttitor
+          vulputate.
+        </my-panel>
+        <my-panel class="box b2 info" header="Info panel">
+          Phasellus eu nulla id ex posuere cursus. Nam eleifend venenatis tempus.
+          Praesent ullamcorper tellus et nisl pellentesque, sit amet fermentum sapien lobortis.
+          Suspendisse tristique magna non purus fringilla dictum sit amet nec erat.
+          Aenean pharetra nec lacus vulputate convallis. Phasellus suscipit elit dolor,
+          vitae ultricies sem finibus tincidunt. Praesent nec lorem vel ante porttitor
+          vulputate.
+        </my-panel>
+      </layout-container>
+      <layout-container class="row">
+        <my-panel class="box b1 warning" header="Warning panel">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Vestibulum vestibulum gravida lectus vel tincidunt.
+          Etiam consequat bibendum enim quis venenatis. In hac habitasse platea dictumst.
+          Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+          Sed convallis rutrum neque vitae dapibus. Etiam blandit orci ut lacus egestas eleifend.
+          Sed accumsan bibendum lectus, eget tincidunt ex volutpat ac.
+        </my-panel>
+        <my-panel class="box b2 danger" header="Danger panel">
+          Phasellus eu nulla id ex posuere cursus. Nam eleifend venenatis tempus.
+          Praesent ullamcorper tellus et nisl pellentesque, sit amet fermentum sapien lobortis.
+          Suspendisse tristique magna non purus fringilla dictum sit amet nec erat.
+          Aenean pharetra nec lacus vulputate convallis. Phasellus suscipit elit dolor,
+          vitae ultricies sem finibus tincidunt. Praesent nec lorem vel ante porttitor
+          vulputate.
+        </my-panel>
+      </layout-container>
+    </article>
+  </slide>
+
+  <slide class="fill nobackground" style="background-image: url(images/geekTalks/disco_background.png)">
+    <div style="position: absolute;top:0;left:0;right:0;bottom:0;background: #222; opacity: 0.5"></div>
+    <hgroup style="position: relative; z-index: 1">
+      <h2 class="white auto-fadein" style="font-size: 80px; line-height: 80px; text-shadow: 5px 5px 0 #000;">
+        COMPONENTIZE <br/><span style="font-size: 100px;line-height: 100px;">THE WEB!!!</span>
+      </h2>
+    </hgroup>
+  </slide>
+
+  <slide class="thank-you-slide segue nobackground">
+    <article class="flexbox vleft auto-fadein">
+      <h2>&lt;thank-you&gt; !!!</h2>
+    </article>
+    <p class="auto-fadein">
+      <about-me class="white" username="IvanZmerzlyi" contacts></about-me>
+    </p>
+  </slide>
+
+  <slide class="backdrop"></slide>
+
+</slides>
+
+<!--[if IE]>
+  <script src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script>
+  <script>CFInstall.check({mode: 'overlay'});</script>
+<![endif]-->
+</body>
+</html>
