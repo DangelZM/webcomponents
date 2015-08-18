@@ -463,30 +463,26 @@ URL: https://code.google.com/p/io-2012-slides
       <h2>Example</h2>
     </hgroup>
     <article class="flexbox vcenter">
+      <pre class="prettyprint" data-lang="html">
+        &lt;my-panel class="primary" header="My custom panel" settings closeable&gt;&lt;/my-panel&gt;<br/>
+        &lt;my-panel class="success" header="Success panel" closeable&gt;&lt;/my-panel&gt;<br/>
+        &lt;my-panel class="info" &nbsp;&nbsp;&nbsp;header="Info panel"&gt;&lt;/my-panel&gt;<br/>
+        &lt;my-panel class="warning" header="Warning panel"&gt;&lt;/my-panel&gt;<br/>
+        &lt;my-panel class="danger" &nbsp;header="Danger panel" closeable&gt;&lt;/my-panel&gt;<br/>
+      </pre>
       <layout-container class="row">
-        <my-panel class="box b2 primary" header="My custom panel">
+        <my-panel class="box b2 primary" header="My custom panel" settings closeable>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           Vestibulum vestibulum gravida lectus vel tincidunt.
           Etiam consequat bibendum enim quis venenatis. In hac habitasse platea dictumst.
-          Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-          Sed convallis rutrum neque vitae dapibus. Etiam blandit orci ut lacus egestas eleifend.
-          Sed accumsan bibendum lectus, eget tincidunt ex volutpat ac.
         </my-panel>
-        <my-panel class="box b2 success" header="Success panel">
+        <my-panel class="box b2 success" header="Success panel" closeable>
           Phasellus eu nulla id ex posuere cursus. Nam eleifend venenatis tempus.
           Praesent ullamcorper tellus et nisl pellentesque, sit amet fermentum sapien lobortis.
-          Suspendisse tristique magna non purus fringilla dictum sit amet nec erat.
-          Aenean pharetra nec lacus vulputate convallis. Phasellus suscipit elit dolor,
-          vitae ultricies sem finibus tincidunt. Praesent nec lorem vel ante porttitor
-          vulputate.
         </my-panel>
         <my-panel class="box b2 info" header="Info panel">
           Phasellus eu nulla id ex posuere cursus. Nam eleifend venenatis tempus.
           Praesent ullamcorper tellus et nisl pellentesque, sit amet fermentum sapien lobortis.
-          Suspendisse tristique magna non purus fringilla dictum sit amet nec erat.
-          Aenean pharetra nec lacus vulputate convallis. Phasellus suscipit elit dolor,
-          vitae ultricies sem finibus tincidunt. Praesent nec lorem vel ante porttitor
-          vulputate.
         </my-panel>
       </layout-container>
       <layout-container class="row">
@@ -494,17 +490,11 @@ URL: https://code.google.com/p/io-2012-slides
           Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           Vestibulum vestibulum gravida lectus vel tincidunt.
           Etiam consequat bibendum enim quis venenatis. In hac habitasse platea dictumst.
-          Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-          Sed convallis rutrum neque vitae dapibus. Etiam blandit orci ut lacus egestas eleifend.
-          Sed accumsan bibendum lectus, eget tincidunt ex volutpat ac.
         </my-panel>
-        <my-panel class="box b2 danger" header="Danger panel">
+        <my-panel class="box b2 danger" header="Danger panel" closeable>
           Phasellus eu nulla id ex posuere cursus. Nam eleifend venenatis tempus.
           Praesent ullamcorper tellus et nisl pellentesque, sit amet fermentum sapien lobortis.
           Suspendisse tristique magna non purus fringilla dictum sit amet nec erat.
-          Aenean pharetra nec lacus vulputate convallis. Phasellus suscipit elit dolor,
-          vitae ultricies sem finibus tincidunt. Praesent nec lorem vel ante porttitor
-          vulputate.
         </my-panel>
       </layout-container>
     </article>
