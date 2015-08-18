@@ -27,6 +27,7 @@ URL: https://code.google.com/p/io-2012-slides
   <link rel="import" href="elements/about-me.html">
   <link rel="import" href="elements/layout-container.html">
   <link rel="import" href="elements/my-panel.html">
+  <link rel="import" href="elements/audio-with-eq.html">
 </head>
 <body style="opacity: 0">
 
@@ -502,6 +503,30 @@ URL: https://code.google.com/p/io-2012-slides
           Suspendisse tristique magna non purus fringilla dictum sit amet nec erat.
         </my-panel>
       </layout-container>
+    </article>
+  </slide>
+
+  <slide class="polymer-example">
+    <hgroup class="centered">
+      <h2>Example2</h2>
+    </hgroup>
+    <article class="flexbox vcenter">
+      <pre class="prettyprint" data-lang="html" style="font-size: 16px;">
+        &lt;audio-with-eq class="ui-blue" source="music/LillyWood-PrayerInC.mp3" color="#369"&gt;&lt;/audio-with-eq>&gt;<br/>
+        &lt;audio-with-eq class="ui-red" source="music/Royksopp-Here_she_comes_again.mp3" color="#AC0303"&gt;&lt;/audio-with-eq&gt;<br/>
+        &lt;audio-with-eq class="ui-dark" source="music/Rasmus-In_shadow.mp3" color="#555"&gt;&lt;/audio-with-eq&gt;
+      </pre>
+      <div style="display: flex;flex-direction: row">
+        <div style="flex: 1;">
+          <audio-with-eq class="ui-blue" song="Lilly Wood - Prayer In C" source="music/LillyWood-PrayerInC.mp3" color="#369"></audio-with-eq>
+        </div>
+        <div style="flex: 1;margin-left: 20px;">
+          <audio-with-eq class="ui-red" song="Royksopp - Here she comes again" source="music/Royksopp-Here_she_comes_again.mp3" color="#AC0303"></audio-with-eq>
+        </div>
+        <div style="flex: 1;margin-left: 20px;">
+          <audio-with-eq class="ui-dark" song="Rasmus - In shadow" source="music/Rasmus-In_shadow.mp3" color="#555"></audio-with-eq>
+        </div>
+      </div>
     </article>
   </slide>
 
